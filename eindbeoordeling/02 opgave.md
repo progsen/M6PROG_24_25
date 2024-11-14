@@ -1,9 +1,9 @@
 ## Tussen beoordeling
 
 ## Opdrachten
-- maak de volgende Unity opdracht:
-
-    - https://github.com/progsen/cs_unity_programmatically_2dmaze
+- maak de volgende opdrachten:
+    - 08 webcam api
+    > https://github.com/progsen/M6PROG_24_25/
 
 ## commit
 

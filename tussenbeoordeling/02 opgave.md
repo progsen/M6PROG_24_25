@@ -1,9 +1,10 @@
 ## Tussen beoordeling
 
 ## Opdrachten
-- maak de volgende Unity opdracht:
+- maak de volgende opdrachten:
+    - 05 inserts
+    > https://github.com/progsen/M6PROG_24_25/
 
-    - https://github.com/progsen/cs_unity_programmatically
 
 ## commit
 
