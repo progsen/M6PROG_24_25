@@ -4,17 +4,17 @@
   - nginx
   - mariadb
   - phpmyadmin
+- Environment instellen
 - Project opstarten
 - Commit in git
 
-## Docker
+## Docker configureren
 Wij werken weer met docker containers voor de web based applicatie.
 In het document `docker-compose.yml` gaan wij de structuur aanmaken van dit project.
-1. geef de versie aan: `version: '3.9'`
-2. maak een onderdeel `services` aan
+1. Maak een onderdeel `services` aan
+2. Binnen de services gaan wij verschillende services toevoegen. _Let hierbij op het inspringen van de code._
 
-## php
-Binnen de services gaan wij verschillende services toevoegen. Let hierbij op het inspringen van de code.<br>
+### php
 Maak een php service aan:
 ```yaml
   # PHP FPM Service
@@ -26,7 +26,7 @@ Maak een php service aan:
       - mariadb
 ```
 
-## nginx
+### nginx
 Maak een nginx proxy service aan:
 ```yaml
   # Nginx Service
@@ -35,43 +35,44 @@ Maak een nginx proxy service aan:
     ports:
       - 88:80
     links:
-      - 'php'
+      - php
     volumes:
       - './:/var/www/html'
-      - './docker/nginx:/etc/nginx/conf.d'
+      - './docker:/etc/nginx/conf.d'
     depends_on:
       - php
 ```
 
-## mariadb
+### mariadb
 Maak een MariaDB database service aan:
 ```yaml
   # MariaDB Service
   mariadb:
     image: mariadb:latest
     environment:
-      MYSQL_DATABASE: m6prog_db
-      MYSQL_USER: m6prog_user
-      MYSQL_PASSWORD: m6prog_pass
-      MYSQL_ROOT_PASSWORD: R00tp@ss
+      MYSQL_DATABASE: '${DB_NAME}'
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ROOT_PASSWORD: '${DB_ROOT_PASSWORD}'
     ports:
       - 3308:3306
 ```
 
-## PhpMyAdmin
+### PhpMyAdmin
 Om eenvoudig de database te kunnen beheren maken wij gebruiken van een phpmyadmin service. Maar je kunt ook via poort 3308 verbinden met een externe tool zoals heidisql of sequelAce.<br>
 Gebruik de root ( admin user ) gegevens om in te loggen zodat je straks meer rechten hebt
 ```yaml
   # phpmyadmin in an external image
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin:latest
     environment:
-      PMA_HOST: mariadb
-      PMA_USER: root
-      PMA_PASSWORD: R00tp@ss
+      PMA_HOST: '${DB_HOST}'
+      PMA_USER: '${DB_USERNAME}'
+      PMA_PASSWORD: '${DB_PASSWORD}'
     ports:
       - "1088:80"
 ```
+
 
 ## nginx conf
 Nu je de docker klaar hebt staan kun je de nginx.conf instellen. Plaats daarvoor deze code in de /docker/nginx/nginx.conf
@@ -107,6 +108,23 @@ server {
         }
 }
 ```
+
+## Environment instellen via een .env file
+1. Maak een voorbeeld environments file aan met de naam: `.env.example`  
+2. Plaats hierin de variabele die je straks gaat gebruiken:  
+```dotenv
+DB_HOST=mariadb
+DB_PORT=3306
+DB_SCHEMA=
+DB_USERNAME=
+DB_PASSWORD=
+DB_ROOT_PASSWORD=
+
+HOSTNAME=http://localhost:88/
+SOURCE_ROOT=/var/www/html/source/
+```
+3. Kopieer _(Dupliceer)_ dit bestand en noem het: `.env`
+4. Vul de ontbrekende waardes in deze `.env` file
 
 ## Start het project
 Nu gaan wij het project initialiseren.

@@ -9,13 +9,13 @@
 
 INSERT into weersomstandighedenPerDag (`datum`,`aantalGraden`,`windKracht`,`regenInMilimeters`,`plaats`) 
 values
- ("2023-01-01",1,10,80,"amsterdam"),
- ("2023-01-01",4,1,10,"den bosch"),
- ("2023-01-02",10,1,0,"den haag"),
- ("2023-01-03",3,3,20,"almere");
+ ("2024-01-01",1,10,80,"amsterdam"),
+ ("2024-01-01",4,1,10,"den bosch"),
+ ("2024-01-02",10,1,0,"den haag"),
+ ("2024-01-03",3,3,20,"almere");
 ```
 
-- druk op de bliksum knop
+- druk op de bliksem knop
 </br>![](img/exe.PNG)
 
 

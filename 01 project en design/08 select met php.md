@@ -2,7 +2,6 @@
 
 - Database structuur
 - Voorbeeld data in het project
-- .env bestand
 - Verwerk het .env bestand
 - Database verbinding
 
@@ -14,28 +13,6 @@ Eerst gaan wij een tabel maken met voorbeeld data zodat wij later goed kunnen te
 
 ## Voorbeeld data
 1. Voer minimaal 5 elementen toe in de database
-
-## .env file
-Wij gaan nu de instellingen uit de .env file verwerken in php. Eerst structureren wij het voorbeeld bestand.
-1. Open .env_example en plaats de volgende regels:
-    ```
-    DB_HOST=
-    DB_SCHEMA=
-    DB_USER=
-    DB_PASSWORD=
-    HOSTNAME=http://localhost:88/
-    SOURCE_ROOT=/var/www/html/source/
-    ```
-2. Open nu .env en plaats de volgende regels:
-    ```
-    DB_HOST=mariadb
-    DB_SCHEMA=
-    DB_USER=
-    DB_PASSWORD=
-    HOSTNAME=http://localhost:88/
-    SOURCE_ROOT=/var/www/html/source
-    ```
-3. Plaats de database gegevens uit docker-compose.yaml op de juiste plek ( MYSQL_DATABASE, MYSQL_USER , MYSQL_PASSWORD ) 
 
 ## Verwerk het .env bestand
 Om de gegevens uit het .env bestand te laden moeten wij via php de juiste informatie ophalen.
@@ -53,14 +30,14 @@ Om de gegevens uit het .env bestand te laden moeten wij via php de juiste inform
     ```
 5. Maak een aantal constanten aan met de waardes uit .env 
     ```php
-      define('DB_SCHEMA', (isset($envSettings['DB_SCHEMA'])) ? $envSettings['DB_SCHEMA'] : 'example');
+      define('DB_HOST', (isset($envSettings['DB_HOST'])) ? $envSettings['DB_HOST'] : 'mariadb');
       define('DB_USER', (isset($envSettings['DB_USER'])) ? $envSettings['DB_USER'] : 'username');
       define('DB_PASSWORD', (isset($envSettings['DB_PASSWORD'])) ? $envSettings['DB_PASSWORD'] : 'pass');
-      define('DB_HOST', (isset($envSettings['DB_HOST'])) ? $envSettings['DB_HOST'] : 'mariadb');
-      define('HOSTNAME', (isset($envSettings['HOSTNAME'])) ? $envSettings['HOSTNAME'] : 'mariadb');
-      define('SOURCE_ROOT', (isset($envSettings['SOURCE_ROOT'])) ? $envSettings['SOURCE_ROOT'] : 'mariadb');
+      define('DB_SCHEMA', (isset($envSettings['DB_SCHEMA'])) ? $envSettings['DB_SCHEMA'] : 'mijndatabase');
+      define('HOSTNAME', (isset($envSettings['HOSTNAME'])) ? $envSettings['HOSTNAME'] : 'http://localhost');
+      define('SOURCE_ROOT', (isset($envSettings['SOURCE_ROOT'])) ? $envSettings['SOURCE_ROOT'] : '/var/www/html/');
     ```
-Definieer in dit bestand ook de andere constantes die nodig hebt voor bijvoorbeeld de hostname en de source_root.
+Definieer in dit bestand eventueel ook de andere constantes die nodig hebt.
 
 ## Maak een database verbinding via MySQLi
 1. Open `/source/database.php`
