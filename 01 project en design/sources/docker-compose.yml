@@ -1,5 +1,3 @@
-version: '3.9'
-
 # Services
 services:
 
@@ -17,10 +15,10 @@ services:
     ports:
       - 88:80
     links:
-      - 'php'
+      - php
     volumes:
       - './:/var/www/html'
-      - './docker/nginx:/etc/nginx/conf.d'
+      - './docker:/etc/nginx/conf.d'
     depends_on:
       - php
 
@@ -28,23 +26,19 @@ services:
   mariadb:
     image: mariadb:latest
     environment:
-      MYSQL_DATABASE: m6prog_db
-      MYSQL_USER: m6prog_user
-      MYSQL_PASSWORD: m6prog_pass
-      MYSQL_ROOT_PASSWORD: R00tp@ss
+      MYSQL_DATABASE: '${DB_NAME}'
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ROOT_PASSWORD: '${DB_ROOT_PASSWORD}'
     ports:
       - 3308:3306
 
   # phpmyadmin in an external image
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin:latest
     environment:
-      PMA_HOST: mariadb
-      PMA_USER: root
-      PMA_PASSWORD: R00tp@ss
+      PMA_HOST: '${DB_HOST}'
+      PMA_USER: '${DB_USERNAME}'
+      PMA_PASSWORD: '${DB_PASSWORD}'
     ports:
-      - "1088:80"
-
-# Volumes
-volumes:
-  mysqldata:
+      - 1088:80
