@@ -43,11 +43,8 @@ laten we beginnen met het opzetten van de html:
     - vergeet niet ook een submit knop te maken!
 
 ## Testen
-- open je directory waar `search.html` instaat in een `terminal`
-- type in:
-    - `php -S localhost:4000`
-    > dit start `php` als een `webhost`
-- open `http://localhost:4000/search.html` in je browser
+- zorg dat je docker draait, en start je M6Prog container
+- open `http://localhost:88/search.html` in je browser
 - maak een screenshot van je search formulier:
     - sla die op in `screenshots` als `01 htmlsearchform.png`
 
