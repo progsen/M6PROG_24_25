@@ -17,11 +17,13 @@
 - kopieer ook `FindPersoon($conn,$name)` uit `search.php` in `imagedownload.php` 
 
 
-> #### UITLEG
-> we gaan nu FindPersoonLike aanpassen zodat we het plaatje uit de database selecteren
-> - dit doen we op basis van `$id`
-> - dan pakken we de `filename` uit de database (door ons gemaakt)
-> - zo voorkomen we dat mensen de waarde van `$id` manipuleren
+
+#### UITLEG
+- lees:
+    > we gaan nu FindPersoonLike aanpassen zodat we het plaatje uit de database selecteren
+    > - dit doen we op basis van `$id`
+    > - dan pakken we de `filename` uit de database (door ons gemaakt)
+    > - zo voorkomen we dat mensen de waarde van `$id` manipuleren
 
 
 ## database aansluiten
@@ -35,13 +37,15 @@
     > </br>![](img/uploadimage.PNG)
 
 #### UITLEG
-> - we krijgen een resultaat uit de database
-> - daar hebben we als het goed is een `filename` opgeslagen
-> - daarna gebruiken we de `php` `file classes` om het `plaatje` te openen
-> Versturen
-> - om de php `response` als `plaatje` te laten werken moeten we de `headers` anders zetten
->       - net als de `application/json`, weet je nog? 
-> - daarna is er een function `fpasstru` die de `file content` (`bytes`) doorstuurt in de `response`
+
+- lees:
+    > - we krijgen een resultaat uit de database
+    > - daar hebben we als het goed is een `filename` opgeslagen
+    > - daarna gebruiken we de `php` `file classes` om het `plaatje` te openen
+    > Versturen
+    > - om de php `response` als `plaatje` te laten werken moeten we de `headers` anders zetten
+    >       - net als de `application/json`, weet je nog? 
+    > - daarna is er een function `fpasstru` die de `file content` (`bytes`) doorstuurt in de `response`
 
 ## testen
 

@@ -8,11 +8,13 @@
     > </br>![](img/logform.PNG)
 
 
-> #### UITLEG
-> - zie je dat we de `event.target` in een `form variabel` stoppen, voor de `leesbaarheid`?
-> - zie je dat we dan `FormData` gebruiken om `form` in te stoppen
->       - deze `Class` is een `helper class` die ons helpt het formulier te lezen
-> - zie je dat we met `data.get("KEYNAME")` de `input velden` kunnen ophalen?
+
+#### UITLEG
+- lees:
+    > - zie je dat we de `event.target` in een `form variabel` stoppen, voor de `leesbaarheid`?
+    > - zie je dat we dan `FormData` gebruiken om `form` in te stoppen
+    >       - deze `Class` is een `helper class` die ons helpt het formulier te lezen
+    > - zie je dat we met `data.get("KEYNAME")` de `input velden` kunnen ophalen?
 
 ## Testen
 
@@ -29,10 +31,12 @@
 - voeg in `toPhpWithGet` toe:
     > </br>![](img/fetchGet.PNG)
 
-> #### UITLEG
-> - zie je dat we een `url` maken?
-> - zie je dat we een `query string` maken (`?a=b&G=hello`)
-> - zie je dat we weer `data.get` gebruiken?
+
+#### UITLEG
+- lees:
+    > - zie je dat we een `url` maken?
+    > - zie je dat we een `query string` maken (`?a=b&G=hello`)
+    > - zie je dat we weer `data.get` gebruiken?
 
 
 ## Testen

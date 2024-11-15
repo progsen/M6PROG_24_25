@@ -23,13 +23,14 @@ we willen het in de `uploads` directory, BUITEN de `public`
 > </br>![](img/filepick.PNG)
 
 
-> #### UITLEG
-> - we maken eerst een `$response` associative array aan:
->   - daarin zit een `succeeded` boolean en een `message` (voor fouten)
-> - Daarna halen we de file `image` op uit `$_FILES`
-> - Dan checken we of de upload gelukt is 
->   - is dat niet zo? geven we een fout terug
-> - als laatst zetten we `$response` om in `json` en geven dat terug
+#### UITLEG
+- lees:
+    > - we maken eerst een `$response` associative array aan:
+    >   - daarin zit een `succeeded` boolean en een `message` (voor fouten)
+    > - Daarna halen we de file `image` op uit `$_FILES`
+    > - Dan checken we of de upload gelukt is 
+    >   - is dat niet zo? geven we een fout terug
+    > - als laatst zetten we `$response` om in `json` en geven dat terug
 
 ## handleFile
 

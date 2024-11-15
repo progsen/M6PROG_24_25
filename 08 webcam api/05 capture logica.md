@@ -18,11 +18,13 @@
 - maak die function en zet dit in de `body`:
     > </br>![](img/ready.PNG)
 
-> #### UITLEG
-> - onze `webapi` heeft een `.ready` boolean.
-> - deze wordt op `true` gezet als alles klaar is
-> - het klaar zetten gebeurt op de `achtergrond` terwijl onze code doorloopt
-> - als je op `submit` clicked terwijl de api `niet klaar` is, dan `crashed` het
+#### UITLEG
+
+- lees:
+    > - onze `webapi` heeft een `.ready` boolean.
+    > - deze wordt op `true` gezet als alles klaar is
+    > - het klaar zetten gebeurt op de `achtergrond` terwijl onze code doorloopt
+    > - als je op `submit` clicked terwijl de api `niet klaar` is, dan `crashed` het
 
 ## CapturePhoto
 

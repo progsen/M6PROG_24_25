@@ -10,14 +10,16 @@ we gaan nu ervoor zorgen dat we een image kunnen uploaden naar PHP
 - zet in je html:
 > </br>![](img/uploadform.PNG)
 
-#### UITLEG
-> - zie je dat we een enctype daar nu hebben staan? deze hebben we nodig om groter files te kunnen sturen
-> - we hebben ineens 2 nieuwe types:
->        - `hidden`
->        - `file`
-> - ook hebben we een `accept` attribute bij de `file` input
->   - voor nu accepteren we alleen `.png` files
 
+#### UITLEG
+- lees:
+    >  - zie je dat we een enctype daar nu hebben staan? deze hebben we nodig om groter files te kunnen sturen
+    >  - we hebben ineens 2 nieuwe types:
+    >      - `hidden`
+    >      - `file`
+    >  - ook hebben we een `accept` attribute bij de `file` input
+    >  - voor nu accepteren we alleen `.png` files
+    
 
 ## php
 
@@ -42,24 +44,29 @@ we gaan nu ervoor zorgen dat we een image kunnen uploaden naar PHP
 
 
 #### UITLEG
-> In Files zit dus:
-> - een array (`[]`) bij de key `image`
->       - `image` is wat in ons formulier staat:
-        > </br>![](img/image.PNG)
-> verder zit er nog meer in:
-> - `file size`, hoe groot is het plaatje in bytes
-> - `tmp_name` waar staat de file op de server
-> - `type`, welke `extensie` heeft de `file`
-> - `error`, deze moet op `0` staan, anders is er iets mis
+
+- lees:
+
+    > In Files zit dus:
+    > - een array (`[]`) bij de key `image`
+    >       - `image` is wat in ons formulier staat:
+            > </br>![](img/image.PNG)
+    > verder zit er nog meer in:
+    > - `file size`, hoe groot is het plaatje in bytes
+    > - `tmp_name` waar staat de file op de server
+    > - `type`, welke `extensie` heeft de `file`
+    > - `error`, deze moet op `0` staan, anders is er iets mis
 
 ## Docker en files
 
-> #### UITLEG
-> als we dit in docker doen krijgen we te zien dat de file in `/tmp` staat:  
-> ![](img/temp.PNG)  
-> alleen als we daar kijken in docker zit er niets in   
-> ![](img/tmpleeg.PNG)  
-> dat komt omdat die file op linux meteen gedelete wordt
+
+#### UITLEG
+- lees:
+    > als we dit in docker doen krijgen we te zien dat de file in `/tmp` staat:  
+    > ![](img/temp.PNG)  
+    > alleen als we daar kijken in docker zit er niets in   
+    > ![](img/tmpleeg.PNG)  
+    > dat komt omdat die file op linux meteen gedelete wordt
 
 - controlleer dat:
     - open je `nginx` container in `docker desktop`

@@ -9,13 +9,15 @@
 - zet het volgende in je javascript file
     > </br>![](img/appsetup.PNG)
 
-> #### UITLEG
-> - we hebben nu een nieuwe class `WebCamApp` gemaakt
-> - die hebben we een constructor gegeven
->   - daarin maken we de class variablen die bij die class horen
-> - we hebben een `Init` function gemaakt om de applicatie op te starten
-> - als laatst maken we een `instance` van onze `WebCamApp` 
->   - en gebruiken die om de application met `Init` op te starten
+#### UITLEG
+
+- lees:
+    > - we hebben nu een nieuwe class `WebCamApp` gemaakt
+    > - die hebben we een constructor gegeven
+    >   - daarin maken we de class variablen die bij die class horen
+    > - we hebben een `Init` function gemaakt om de applicatie op te starten
+    > - als laatst maken we een `instance` van onze `WebCamApp` 
+    >   - en gebruiken die om de application met `Init` op te starten
 
 ## constructor
 

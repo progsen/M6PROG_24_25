@@ -1,9 +1,12 @@
 
 ## naar de NGINX container
 
+
 #### UITLEG
-> nu moeten deze certificaten naar de NGINX container
-> daarvoor moeten deze de container in laten kopieeren
+
+- lees:
+    > nu moeten deze certificaten naar de NGINX container
+    > daarvoor moeten deze de container in laten kopieeren
 
 - open je `docker-compose.yml`
     - voeg het volgende toe:

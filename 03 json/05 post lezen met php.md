@@ -7,12 +7,14 @@
     > </br>![](img/networkpost.PNG)
 
 
-> #### UITLEG
-> we gebruiken nu `file_get_contents('php://input') ;` 
-> - dit haalt de hele body content van de httprequest op
-> - kijk hieronder, zie je dat we in de options:
->   - de body toewijzen
->   - het content-type zetten?
+
+#### UITLEG
+- lees:
+    > we gebruiken nu `file_get_contents('php://input') ;` 
+    > - dit haalt de hele body content van de httprequest op
+    > - kijk hieronder, zie je dat we in de options:
+    >   - de body toewijzen
+    >   - het content-type zetten?
     > </br>![](img/fetchoption.PNG)
 
 ## string naar json

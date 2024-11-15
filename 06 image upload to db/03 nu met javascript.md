@@ -24,9 +24,11 @@ nu gaan we de eventListener bouwen:
 - maak een nieuwe function `uploadFormFile` en zet daarin:
 > </br>![](img/postform.PNG)
 
-> #### UITLEG
-> - zie je dat we bijna hetzelfde doen als in `appNaw.js`?
-> - alleen geven we meteen de `FormData` aan de `body`?
+
+#### UITLEG
+- lees:
+    > - zie je dat we bijna hetzelfde doen als in `appNaw.js`?
+    > - alleen geven we meteen de `FormData` aan de `body`?
 
 - tijd voor `fetch`, je hebt weer een `options`.. doe na wat in `appNaw.js` gebeurt om te posten
     - post wel naar `imagereceive.php` NIET naar `nawOpslaan2.php`

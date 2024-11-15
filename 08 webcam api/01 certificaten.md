@@ -1,14 +1,14 @@
 ## Webcam api UITLEG
 
-> DIT IS BELANGRIJK goed lezen!
-De webcam api heeft een aantal punten waar je rekening mee moet houden:
-- de api is nog experimenteel 
-- de api werkt in `edge` + `chrome` volledig
-    - gebruik deze browsers om te testen!
-- de api kan alleen vanaf een `HTTPS` verbinding gebruikt worden
-    - dus je test vanaf je `MA_CLOUD`
-    - OF je zoekt uit hoe je https in docker aan de praat krijgt!
-        - zie mapje `nginxcert` voor wat `developer` certificaten
+- lees ( DIT IS BELANGRIJK goed lezen!)
+    > De webcam api heeft een aantal punten waar je rekening mee moet houden:
+    > - de api is nog experimenteel 
+    > - de api werkt in `edge` + `chrome` volledig
+    >     - gebruik deze browsers om te testen!
+    > - de api kan alleen vanaf een `HTTPS` verbinding gebruikt worden
+    >     - dus je test vanaf je `MA_CLOUD`
+    >     - OF je zoekt uit hoe je https in docker aan de praat krijgt!
+    >         - zie mapje `nginxcert` voor wat `developer` certificaten
 
 
 ## certificaten genereren
@@ -62,11 +62,13 @@ openssl req -x509 \
     > </br>![](img/certs.PNG)
     
 
-> #### SECURITY UITLEG
-> Normaal zet je `NOOIT` key certificaten in git, alleen de `public` variant mag
-> in dit geval kan het `MAAR`:
-> - als je dit ergens `LIVE` gaat zetten, `MOET` je andere certificaten maken!
-> Dit komt omdat als iemand je `private key` certificaat heeft die persoon zich kan `voordoen` als jou/ jou server
+#### UITLEG
+
+- lees:
+    > Normaal zet je `NOOIT` key certificaten in git, alleen de `public` variant mag
+    > in dit geval kan het `MAAR`:
+    > - als je dit ergens `LIVE` gaat zetten, `MOET` je andere certificaten maken!
+    > Dit komt omdat als iemand je `private key` certificaat heeft die persoon zich kan `voordoen` als jou/ jou server
 
  ## Klaar?
 - commit naar je github

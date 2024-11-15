@@ -28,12 +28,14 @@ laten we beginnen met het opzetten van de html:
 - bekijk deze code: (uit w3 schools)
 </br>![](img/form.PNG)
 
-> #### UITLEG
-> - je ziet de action (`/action_page.php`) dat is het adres waar de data heengaat
-> - de `label` is om het formulier leesbaarder te maken
-> - het `input` element is waar de data door de gebruiker ingevoerd wordt
-> - het `input` element heeft een attribuut `name`, die wordt ook meegestuurd
-> - het `input` element heeft een attribuut `value`, die wordt ook meegestuurd
+
+#### UITLEG
+- lees:
+    > - je ziet de action (`/action_page.php`) dat is het adres waar de data heengaat
+    > - de `label` is om het formulier leesbaarder te maken
+    > - het `input` element is waar de data door de gebruiker ingevoerd wordt
+    > - het `input` element heeft een attribuut `name`, die wordt ook meegestuurd
+    > - het `input` element heeft een attribuut `value`, die wordt ook meegestuurd
 
 ## Search formulier
 
@@ -66,10 +68,12 @@ laten we beginnen met het opzetten van de html:
 - controlleer of je nu naar de pagina `search.php` gaat:
 </br>![](img/naarsearchphp.PNG)
 
-> #### UITLEG
-> Zie je dat je nu de `url` krijgt met `?search=mario`
-> - Dit komt omdat een `form` standaard een `GET request` verstuurt
-> - dit is nog vrij oldschool, later gaan we dit met javascript doen en zorgen dat we niet naar de `.php` gaan
+
+#### UITLEG
+- lees:
+    > Zie je dat je nu de `url` krijgt met `?search=mario`
+    > - Dit komt omdat een `form` standaard een `GET request` verstuurt
+    > - dit is nog vrij oldschool, later gaan we dit met javascript doen en zorgen dat we niet naar de `.php` gaan
 
 
 ## Klaar?
