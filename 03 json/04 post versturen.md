@@ -30,7 +30,9 @@ Dit is wat ingewikkelder, we gebruiken weer fetch
     > </br>![](img/fetchoption.PNG)
 
 
-> #### UITLEG
+
+#### UITLEG
+- lees:
 > hier maken we `options` aan, die vertellen `fetch`:
 > - hoe die moet gaan versturen (`POST`)
 > - wat die moet versturen (`body`)
