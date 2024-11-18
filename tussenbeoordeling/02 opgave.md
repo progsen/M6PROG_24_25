@@ -2,7 +2,7 @@
 
 ## Opdrachten
 - maak de volgende opdrachten:
-    - 05 inserts
+    - 04 inserts
     > https://github.com/progsen/M6PROG_24_25/
 
 
