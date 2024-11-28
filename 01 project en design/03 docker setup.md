@@ -54,7 +54,7 @@ Maak een MariaDB database service aan:
     image: mariadb:latest
     environment:
       MYSQL_DATABASE: '${DB_SCHEMA}'
-      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_USER: '${DB_USER}'
       MYSQL_PASSWORD: '${DB_PASSWORD}'
       MYSQL_ROOT_PASSWORD: '${DB_ROOT_PASSWORD}'
     ports:
@@ -70,7 +70,7 @@ Gebruik de root ( admin user ) gegevens om in te loggen zodat je straks meer rec
     image: phpmyadmin:latest
     environment:
       PMA_HOST: '${DB_HOST}'
-      PMA_USER: '${DB_USERNAME}'
+      PMA_USER: '${DB_USER}'
       PMA_PASSWORD: '${DB_PASSWORD}'
     ports:
       - "1088:80"
@@ -119,7 +119,7 @@ server {
 DB_HOST=mariadb
 DB_PORT=3306
 DB_SCHEMA=
-DB_USERNAME=
+DB_USER=
 DB_PASSWORD=
 DB_ROOT_PASSWORD=
 
