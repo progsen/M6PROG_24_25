@@ -38,7 +38,7 @@ Maak een nginx proxy service aan:
       - php
     volumes:
       - './:/var/www/html'
-      - './docker:/etc/nginx/conf.d'
+      - './docker/nginx:/etc/nginx/conf.d'
     depends_on:
       - php
 ```
