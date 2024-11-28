@@ -11,8 +11,11 @@
 ## Docker configureren
 Wij werken weer met docker containers voor de web based applicatie.
 In het document `docker-compose.yml` gaan wij de structuur aanmaken van dit project.
-1. Maak een onderdeel `services` aan
-2. Binnen de services gaan wij verschillende services toevoegen. _Let hierbij op het inspringen van de code._
+- op de eerste regel: 
+  - type je `services:`
+
+- daaronder de services gaan wij verschillende services toevoegen. 
+>_Let hierbij op het inspringen van de code._
 
 ### php
 Maak een php service aan:
