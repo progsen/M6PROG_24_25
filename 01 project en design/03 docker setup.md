@@ -50,7 +50,7 @@ Maak een MariaDB database service aan:
   mariadb:
     image: mariadb:latest
     environment:
-      MYSQL_DATABASE: '${DB_NAME}'
+      MYSQL_DATABASE: '${DB_SCHEMA}'
       MYSQL_USER: '${DB_USERNAME}'
       MYSQL_PASSWORD: '${DB_PASSWORD}'
       MYSQL_ROOT_PASSWORD: '${DB_ROOT_PASSWORD}'
