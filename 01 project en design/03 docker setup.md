@@ -66,7 +66,7 @@ Gebruik de root ( admin user ) gegevens om in te loggen zodat je straks meer rec
   phpmyadmin:
     image: phpmyadmin:latest
     environment:
-      PMA_HOST: '${DB_HOST}'
+      PMA_HOST: '${DB_SCHEMA}'
       PMA_USER: '${DB_USERNAME}'
       PMA_PASSWORD: '${DB_PASSWORD}'
     ports:
