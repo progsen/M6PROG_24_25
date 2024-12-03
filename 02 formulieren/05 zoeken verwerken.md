@@ -39,7 +39,7 @@ Wij gebruiken de WeersomstandighedenPerDag tabel van vorige week.
 
 ## Informatie ophalen uit de superglobal
 In de php code hebben wij vorige week een placeholder variabele `$plaats` gemaakt, die gaan wij nu vullen met informatie uit de $_GET 
-1. Zoek de definitie van $plaats op, ergens in de buurt van regel 25
+1. Zoek de definitie van $plaats op
 2. Zorg er nu voor dat de waarde gevuld word met de waarde die verstuurd is.
 ```php
 $plaats = $_GET....
